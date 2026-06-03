@@ -83,7 +83,7 @@ const Home = () => {
                 }} >preview</button>
                 </div>
                 <div className="second">
-                  <CopyInput value={`http://localhost:5173/${username}`} />
+                  <CopyInput value={`https://dev-folio83.netlify.app/${username}`} />
                 </div>
             </div>
         : 'not genrated'}
