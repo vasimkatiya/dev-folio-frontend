@@ -23,9 +23,7 @@ Email: ${email}
 Message: ${message}
     `;
 
-    const number = "919876543210"; // country code ke sath
-
-    const url = `https://wa.me/${number}?text=${encodeURIComponent(
+    const url = `https://wa.me/91${number}?text=${encodeURIComponent(
       text
     )}`;
 
