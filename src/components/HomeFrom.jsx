@@ -43,11 +43,11 @@ const HomeFrom = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-handler">
           <label htmlFor="">name</label>
-          <input type="text" required value={name} onChange={(e)=>setname(e.target.value)} name='name' />
+          <input type="text" placeholder='enter name' required value={name} onChange={(e)=>setname(e.target.value)} name='name' />
           </div>
           <div className="input-handler">
           <label htmlFor="">profession</label>
-          <input type="text" required value={title} onChange={(e)=>settitle(e.target.value)} name='title' />
+          <input type="text" placeholder='e.g. Frontend Dev' required value={title} onChange={(e)=>settitle(e.target.value)} name='title' />
           </div>
           <div className="input-handler">
           <label htmlFor="">description</label>

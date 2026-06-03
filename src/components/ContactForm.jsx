@@ -47,12 +47,12 @@ const ContactFrom = () => {
       <form onSubmit={handleSubmit}>
         <div className="input-handler">
           <label htmlFor="">email</label>
-          <input type="email" required value={email} onChange={(e)=>setemail(e.target.value)} name='email' />
+          <input type="email" placeholder='example@gmail.com' required value={email} onChange={(e)=>setemail(e.target.value)} name='email' />
           </div>
 
           <div className="input-handler">
           <label htmlFor="">phone</label>
-          <input type="text" value={mobile} required onChange={(e)=>setmobile(e.target.value)} name='phone' />
+          <input type="text" placeholder='884xx xxxxx' value={mobile} required onChange={(e)=>setmobile(e.target.value)} name='phone' />
           </div>
 
           <div className="input-handler">

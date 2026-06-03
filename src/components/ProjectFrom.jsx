@@ -54,17 +54,17 @@ const ProjectFrom = () => {
 
           <div className="input-handler">
           <label htmlFor="">tech used </label>
-          <input type="text" required value={tech} onChange={(e)=>settech(e.target.value)} name='tech' />
+          <input type="text" placeholder='e.g. Javascript,CSS,HTML' required value={tech} onChange={(e)=>settech(e.target.value)} name='tech' />
           </div>
 
           <div className="input-handler">
           <label htmlFor="">preview link</label>
-          <input type="text" value={link} onChange={(e)=>setlink(e.target.value)} name='link' />
+          <input type="text" value={link} placeholder='https://....' onChange={(e)=>setlink(e.target.value)} name='link' />
           </div>
 
           <div className="input-handler">
           <label htmlFor="">github link</label>
-          <input type="text" value={repo} onChange={(e)=>setrepo(e.target.value)} name='github_link' />
+          <input type="text" placeholder='https://....' value={repo} onChange={(e)=>setrepo(e.target.value)} name='github_link' />
           </div>
 
         <button type="submit" className='sub'>{load ? "loading" : "save"}</button>

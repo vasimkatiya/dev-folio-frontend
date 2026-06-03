@@ -54,7 +54,7 @@ const AboutFrom = () => {
         <form onSubmit={handleSubmit}>
         <div className="input-handler">
           <label htmlFor="">name</label>
-          <input type="text" required name='name' value={name} onChange={(e)=>setname(e.target.value)} />
+          <input type="text" placeholder='enter name' required name='name' value={name} onChange={(e)=>setname(e.target.value)} />
           </div>
     
         <div className="input-handler">
