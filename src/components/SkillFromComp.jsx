@@ -32,7 +32,7 @@ function SkillsForm() {
       setLoading(true);
 
       const res = await axios.post(
-        "http:/dev-folio83.netlify.app/api/skills",
+        "https:/dev-folio83.netlify.app/api/skills",
         { skills },
         {
           withCredentials: true,
