@@ -13,8 +13,8 @@ const AboutLayout = ({name,image,text}) => {
       scrollTrigger:{
         trigger:"#about",
         // markers:true,
-        start:"top 50%",
-        end:"top 0%",
+        start:"top 70%",
+        end:"top 10%",
         scrub:2
       }
     });

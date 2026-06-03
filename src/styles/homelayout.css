@@ -19,10 +19,12 @@
 h1{
     font-size: 3rem;
     font-weight: bolder;
+    text-align: center;
 }
 
 h2{
     font-size: 2.3rem;
+    text-align: center;
     text-transform: capitalize;
     font-weight: 500;
 }
@@ -32,4 +34,13 @@ p{
     text-transform: capitalize;
     text-align: center;
     font-weight: 400;
+}
+
+@media (max-width:760px) {
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
 }

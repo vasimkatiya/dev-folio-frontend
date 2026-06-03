@@ -56,3 +56,10 @@ textarea{
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width:760px) {
+    h2{
+        font-size: 22px;
+        text-align: center;
+    }
+}
