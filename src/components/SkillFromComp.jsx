@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import '../styles/skillform.css'
+import "../styles/skillform.css";
 import { errorToast, successToast } from "../config/toast.config";
 
 function SkillsForm() {
@@ -9,18 +9,24 @@ function SkillsForm() {
   const [loading, setLoading] = useState(false);
 
   const addSkill = () => {
-    if (!skill.trim()) return;
+    const trimmedSkill = skill.trim();
 
-    setSkills([...skills, skill.trim()]);
+    if (!trimmedSkill) return;
+
+    setSkills((prev) => [...prev, trimmedSkill]);
     setSkill("");
   };
 
   const removeSkill = (index) => {
-    setSkills(skills.filter((_, i) => i !== index));
+    setSkills((prev) => prev.filter((_, i) => i !== index));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (skills.length === 0) {
+      return errorToast("Please add at least one skill");
+    }
 
     try {
       setLoading(true);
@@ -36,10 +42,16 @@ function SkillsForm() {
       console.log(res.data);
 
       setSkills([]);
-      successToast('skill successfully added.')
+      setSkill("");
+
+      successToast("Skills successfully added.");
     } catch (error) {
       console.error(error);
-      errorToast('failed to add skill, please click on the add button.')
+
+      errorToast(
+        error.response?.data?.message ||
+          "Failed to add skills."
+      );
     } finally {
       setLoading(false);
     }
@@ -47,7 +59,7 @@ function SkillsForm() {
 
   return (
     <div className="sf">
-      <h2 className="">Add Skills</h2>
+      <h2>Add Skills</h2>
 
       <form onSubmit={handleSubmit}>
         <div className="skill-inp">
@@ -56,7 +68,12 @@ function SkillsForm() {
             value={skill}
             onChange={(e) => setSkill(e.target.value)}
             placeholder="Enter skill"
-            className=""
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                addSkill();
+              }
+            }}
           />
 
           <button
@@ -68,12 +85,9 @@ function SkillsForm() {
           </button>
         </div>
 
-        <div className="">
+        <div>
           {skills.map((item, index) => (
-            <div
-              key={index}
-              className="item-con"
-            >
+            <div key={`${item}-${index}`} className="item-con">
               <span className="item">{item}</span>
 
               <button
@@ -89,7 +103,7 @@ function SkillsForm() {
 
         <button
           type="submit"
-          disabled={loading || skills.length === 0}
+          disabled={loading}
           className="sub"
         >
           {loading ? "Saving..." : "Save Skills"}
