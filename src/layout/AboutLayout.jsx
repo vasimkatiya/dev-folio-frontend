@@ -12,7 +12,7 @@ const AboutLayout = ({name,image,text}) => {
     const tl = gsap.timeline({
       scrollTrigger:{
         trigger:"#about",
-        markers:true,
+        // markers:true,
         start:"top 50%",
         end:"top 0%",
         scrub:2
