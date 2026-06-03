@@ -1,0 +1,41 @@
+.sf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+}
+
+form > .skill-inp{
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+    input{
+        background-color: antiquewhite;
+        color: black;
+        min-width: 50vw;
+    }
+    button{
+        background-color:green;
+        font-weight: 600;
+    }
+    button:hover{
+        background-color: grey;
+        transition: ease-in-out 0.4s;
+        cursor:pointer
+    }
+}
+
+.item-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-transform: capitalize;
+    margin-top: 0.8rem;
+    font-weight: 600
+}
+
+.x{
+    background-color: #dd0606;
+}

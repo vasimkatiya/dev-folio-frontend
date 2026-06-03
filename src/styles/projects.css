@@ -1,0 +1,65 @@
+
+
+#projects{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    background-color: #071022;
+    color: wheat;
+}
+
+
+.project-con{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.pro-card{
+    background-color: rgb(199, 196, 199);
+    padding: 2rem 3rem;
+    display: flex;
+    max-width: 18rem;
+    min-height: 40vh;
+    color: black;
+    margin: auto;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 3rem;
+    h2{
+        /* width: 70%; */
+        font-size: 28px;
+        white-space: nowrap;
+    }
+    h4{
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+
+    .btns{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 18px;
+    }
+
+    button{
+         background: linear-gradient(#9f025e,#e6b926);
+         padding: 0.6rem 3rem;
+         text-transform: capitalize;
+         border-radius: 2rem;
+         cursor: pointer;
+         border: 1px transparent;
+    }
+
+    button:hover{
+        background: rgb(178, 178, 178);
+        border: 1px solid  #9f025e;
+    }
+
+}
+
+

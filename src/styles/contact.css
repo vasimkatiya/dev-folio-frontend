@@ -1,0 +1,58 @@
+
+#contact{
+    background: linear-gradient(#9f025e,#e6b926);
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 4rem 2rem;
+
+    h2{
+        font-weight: 500;
+    }
+
+    form{
+        min-width: 100%;
+
+    }
+
+    form input{
+        background-color:wheat ;
+        color: black;
+        min-width: 50vw;
+        max-width: 600px;
+    }
+}
+
+textarea{
+    border: 1px solid rgb(0, 0, 0);
+    min-width: 50vw;
+    max-width: 600px;
+}
+
+.social-media,.fir,.sec{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: black;
+    width: 100%;
+}
+
+.social{
+    padding-top: 2rem;
+    color: black;
+
+}
+
+
+.card{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

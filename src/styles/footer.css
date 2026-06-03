@@ -1,0 +1,16 @@
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #071022;
+    padding: 2rem;
+    gap: 1rem;
+
+    ul{
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+}

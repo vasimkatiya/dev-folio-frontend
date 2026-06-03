@@ -1,0 +1,32 @@
+.main{
+    min-height:100vh;
+    width: 100%;
+    padding: 2rem 2rem;
+
+    h1{
+        font-size: 180%;
+        text-decoration: underline;
+        margin-bottom: 2rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+    }
+    
+    
+    .home-home{
+        padding: 100px 0px;
+    }
+}
+
+.genrate{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    width: 80%;
+    font-weight: 600;
+    text-transform: capitalize;
+    align-items: center;
+}
+
+.preview{
+    margin-top: 2rem;
+}

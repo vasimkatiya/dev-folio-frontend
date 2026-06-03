@@ -1,0 +1,78 @@
+.home-form,.about-form,.project-form,.contact-form{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+
+}
+
+.input-handler{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: center;
+    font-size: 18px;
+    input,textarea{
+        min-width: 50vw ;
+        background-color: antiquewhite;
+        color: black;
+    }
+}
+label{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+form{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem ;
+
+    .sub{
+        width:20vw;
+    }
+
+    textarea{
+        background-color: antiquewhite;
+        border-radius: 1rem;
+        color: black;
+        text-transform: capitalize;
+        padding: 1rem 1.4rem;
+    }
+
+}
+
+form > button{
+    background-color: rgb(0, 98, 128);
+    cursor: pointer;
+}
+
+form > button:hover{
+    background-color: rgb(105, 86, 105);
+    transition: ease-in-out 0.4s;
+}
+
+.add{
+    min-width: 15vw;
+    border-radius: 1.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+
+}
+
+.x{
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 55%;
+}
+
+
+@media (max-width:600px) {
+    .input-handler{
+        flex-direction: column;
+        align-items: start;
+        gap: 3px;
+    }
+}
