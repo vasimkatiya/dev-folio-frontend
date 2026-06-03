@@ -15,7 +15,7 @@ const ContactFrom = () => {
     const handleSubmit = async (e) => {
   e.preventDefault();
 
-  if (!email || !mobile || !instagram || !linkedIn || !gitHub ) {
+  if (!email || !mobile ) {
     return errorToast("All fields are required");
   }
 
@@ -57,17 +57,17 @@ const ContactFrom = () => {
 
           <div className="input-handler">
           <label htmlFor="">instagram</label>
-          <input type="text" value={instagram} required onChange={(e)=>setinstagram(e.target.value)} name='instagram' />
+          <input type="text" value={instagram} onChange={(e)=>setinstagram(e.target.value)} name='instagram' />
           </div>
 
           <div className="input-handler">
           <label htmlFor="">linkedIn</label>
-          <input type="text" value={linkedIn} required onChange={(e)=>setlinkedIn(e.target.value)} name='linkedin' />
+          <input type="text" value={linkedIn} onChange={(e)=>setlinkedIn(e.target.value)} name='linkedin' />
           </div>
 
            <div className="input-handler">
           <label htmlFor="">github</label>
-          <input type="text" value={gitHub} required onChange={(e)=>setgitHub(e.target.value)} name='github' />
+          <input type="text" value={gitHub} onChange={(e)=>setgitHub(e.target.value)} name='github' />
           </div>
 
         <button type="submit" className='sub'>{load ? "loading" : "save"}</button>

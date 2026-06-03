@@ -63,18 +63,22 @@ Message: ${message}
         <MdEmail />
         {mail}
       </div>
-      <div className="email flex items-center gap-1 text-xl text-black">
+     {
+      linkedin ?  <div className="email flex items-center gap-1 text-xl text-black">
         <GrLinkedin />
         {linkedin}
-      </div>
-      <div className="email flex items-center gap-1 text-xl text-black">
+      </div> : ""
+     }
+     {
+      github ?  <div className="email flex items-center gap-1 text-xl text-black">
         <FaGithubSquare />
         {github}
-      </div>
-      <div className="email flex items-center gap-1 text-xl text-black">
+      </div> : ""
+     }
+      {insta ? <div className="email flex items-center gap-1 text-xl text-black">
         <RiCamera2Fill />
         {insta}
-      </div>
+      </div> : ""}
    </div>
    </>
   );

@@ -14,7 +14,7 @@ const ProjectFrom = () => {
     const handleSubmit = async (e) => {
   e.preventDefault();
 
-  if (!project || !tech || !link || !repo) {
+  if (!project || !tech) {
     return errorToast("All fields are required");
   }
 
