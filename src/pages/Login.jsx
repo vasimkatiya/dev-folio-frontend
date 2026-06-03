@@ -28,7 +28,6 @@ const Login = () => {
             setemail("");
             setpassword("");
             
-            console.log(res.data);
             setload(false)
 
             setTimeout(() => {

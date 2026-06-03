@@ -7,6 +7,7 @@ import ProjectFrom from '../components/ProjectFrom'
 import ContactFrom from '../components/ContactForm'
 import CopyInput from '../components/CopyInput'
 import { useNavigate } from 'react-router-dom'
+import Logout from './Logout'
 
 
 const Home = () => {
@@ -88,7 +89,7 @@ const Home = () => {
             </div>
         : 'not genrated'}
     </div>
-
+      <Logout />
     </main>
   )
 }
