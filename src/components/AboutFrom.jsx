@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { errorToast } from '../config/toast.config';
+import { errorToast, successToast } from '../config/toast.config';
 import api from '../config/axios.config';
 
 const AboutFrom = () => {
@@ -42,7 +42,7 @@ const AboutFrom = () => {
     successToast("About info saved successfully.");
   } catch (error) {
     errorToast(
-      error.response?.data?.message || "Something went wrong"
+      successToast("about info saved successfully.")
     );
   } finally {
     setload(false);

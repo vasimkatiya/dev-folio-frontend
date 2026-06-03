@@ -18,11 +18,13 @@ const ProjectLayout = ({projects}) => {
               <h2>{ele.project_name}</h2>
               <h4>{ele.tech}</h4>
               <div className="btns">
-                <button className="src" onClick={()=>window.open(ele.github_link, "_blank")
+               {ele.github_link ?  <button className="src" onClick={()=>window.open(ele.github_link, "_blank")
                 } >
                   source
-                </button>
-                <button className="preview" onClick={()=>window.open(ele.link, "_blank")}>preview</button>
+                </button> : ""}
+                {
+                  ele.link ? <button className="preview" onClick={()=>window.open(ele.link, "_blank")}>preview</button> : ""
+                }
               </div>
           </div>
         })}
